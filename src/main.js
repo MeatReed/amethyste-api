@@ -7,9 +7,9 @@ class ameApi {
     constructor(apikey) {
         this.apikey = apikey;
     }
-    async generate(endpoint, data = {}) {
+    async generate(endpoint, {data}) {
         try {
-            let image = await post('https://v1.api.amethyste.moe/generate/' + endpoint, data, {
+            let image = await post('https://v1.api.amethyste.moe/generate/' + endpoint, {data}, {
                 responseType: 'arraybuffer',
                 headers: {
                     'Authorization': 'Bearer ' + this.apikey,
