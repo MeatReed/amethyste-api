@@ -10,7 +10,7 @@
 </div>
 	
 ## Description
-Module non-officiel pour l'api du bot Améthyse
+Module non-officiel pour l'api du bot Améthyste
 
 ## Installation
 ```
