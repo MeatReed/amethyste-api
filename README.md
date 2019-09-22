@@ -32,6 +32,10 @@ Module non-officiel pour l'api du bot Améthyse
 
 
 ## Utilisation
+```
+npm i amethyse-api
+```
+
 **Connexion :**
 ```js
     const ameClient = require(******)
