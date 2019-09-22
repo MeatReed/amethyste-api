@@ -1,4 +1,13 @@
+<div align="center">
 
+  <p>
+    <a href="https://www.npmjs.com/package/amethyse-api"><img src="https://img.shields.io/npm/v/amethyse-api.svg?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/amethyse-api"><img src="https://img.shields.io/npm/dt/amethyse-api.svg?maxAge=3600" alt="NPM downloads" /></a>
+  </p>
+  <p>
+    <a href="https://nodei.co/npm/amethyse-api/"><img src="https://nodei.co/npm/amethyse-api.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+  </p>
+	
 ## Description
 Module non-officiel pour l'api du bot Améthyse
 
