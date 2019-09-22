@@ -3,6 +3,9 @@
 Module non-officiel pour l'api du bot Améthyse
 
 ## Installation
+```
+npm i amethyse-api
+```
 
 ## Endpoint
 
