@@ -53,7 +53,7 @@ npm i amethyse-api
 
 **Connexion :**
 ```js
-    const ameClient = require(******)
+    const ameClient = require("amethyse-api")
     const ameApi = new ameClient(client, "token")
 ```
 **Endpoint :**
