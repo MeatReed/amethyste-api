@@ -1,6 +1,6 @@
 {
   "name": "amethyse-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module non-officiel de l'api Améthyse",
   "main": "index.js",
   "keywords": [
