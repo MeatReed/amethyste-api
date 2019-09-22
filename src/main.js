@@ -4,9 +4,7 @@ const {
 
 class ameApi {
 
-    constructor(client, apikey) {
-        if (!client) return;
-        this.client = client;
+    constructor(apikey) {
         this.apikey = apikey;
     }
     async generate(endpoint, data = {}) {
