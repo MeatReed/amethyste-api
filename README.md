@@ -40,8 +40,10 @@ npm i amethyse-api
 |blur|url, blur|
 |posterize|url, posterize|
 |beautiful|url|
+|afusion => avatar-fusion|url|
 |wanted|url|
 |3000years|url|
+|rip |url|
 
 
 ## Utilisation
