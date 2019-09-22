@@ -1,12 +1,15 @@
 
+## Description
+Module non-officiel pour l'api du bot Améthyse
+
 ## Installation
 
 ## Endpoint
 
-url = Image url
-pixelize (entre 1 et 50, default: 8)
-posterize (entre 1 et 100, defaut : 5 )
-blur (entre 1 et 30, defaut : 5)
+ - url = Image url
+ - pixelize (entre 1 et 50, default: 8)
+ - posterize (entre 1 et 100, defaut : 5 )
+ - blur (entre 1 et 30, defaut : 5)
 
 
 |Nom|Params|
@@ -24,13 +27,15 @@ blur (entre 1 et 30, defaut : 5)
 |blur|url, blur|
 |posterize|url, posterize|
 |beautiful|url|
+|wanted|url|
+|3000years|url|
 
 
 ## Utilisation
 **Connexion :**
 ```js
-const ameClient = require(******)
-const ameApi = new ameClient(client, "token")
+    const ameClient = require(******)
+    const ameApi = new ameClient(client, "token")
 ```
 **Endpoint :**
 ```js
