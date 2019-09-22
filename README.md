@@ -7,6 +7,7 @@
   <p>
     <a href="https://nodei.co/npm/amethyse-api/"><img src="https://nodei.co/npm/amethyse-api.png?downloads=true&stars=true" alt="npm installnfo" /></a>
   </p>
+</div>
 	
 ## Description
 Module non-officiel pour l'api du bot Améthyse
