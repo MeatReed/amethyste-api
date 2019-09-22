@@ -47,9 +47,6 @@ npm i amethyse-api
 
 
 ## Utilisation
-```
-npm i amethyse-api
-```
 
 **Connexion :**
 ```js
