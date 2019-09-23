@@ -63,6 +63,8 @@ npm i amethyste-api
 	    "url" : "image url"
     }).then(image => {
       console.log(image)
+    }).catch(err => {
+      throw err;
     })
     
 ```
@@ -76,6 +78,8 @@ npm i amethyste-api
 	    "url" : "https://cdn.discordapp.com/avatars/450352584302002186/c0ff7e943ab89560503b8e99591ff888.png?size=2048"
     }).then(image => {
       console.log(image)
+    }).catch(err => {
+      throw err;
     })
 ```
 *Returns*
