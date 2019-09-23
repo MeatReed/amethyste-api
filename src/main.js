@@ -8,8 +8,8 @@ class ameApi {
         this.apikey = apikey;
     }
     async generate(endpoint, data = {}) {
-        if(!this.apikey) return 'Missing Api Key';
-        if(!endpoint) return 'Missing endpoint';
+        if(!this.apikey) throw 'Missing Api Key';
+        if(!endpoint) throw 'Missing endpoint';
         try {
             let image = await post(`https://v1.api.amethyste.moe/generate/${endpoint}`, data, {
                 responseType: 'arraybuffer',
