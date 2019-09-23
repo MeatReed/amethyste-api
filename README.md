@@ -1,11 +1,11 @@
 <div align="center">
 
   <p>
-    <a href="https://www.npmjs.com/package/amethyse-api"><img src="https://img.shields.io/npm/v/amethyse-api.svg?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/amethyse-api"><img src="https://img.shields.io/npm/dt/amethyse-api.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://www.npmjs.com/package/amethyste-api"><img src="https://img.shields.io/npm/v/amethyste-api.svg?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/amethyste-api"><img src="https://img.shields.io/npm/dt/amethyste-api.svg?maxAge=3600" alt="NPM downloads" /></a>
   </p>
   <p>
-    <a href="https://nodei.co/npm/amethyse-api/"><img src="https://nodei.co/npm/amethyse-api.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+    <a href="https://nodei.co/npm/amethyste-api/"><img src="https://nodei.co/npm/amethyste-api.png?downloads=true&stars=true" alt="npm installnfo" /></a>
   </p>
 </div>
 	
@@ -14,7 +14,7 @@ Module non-officiel pour l'api du bot Améthyste
 
 ## Installation
 ```
-npm i amethyse-api
+npm i amethyste-api
 ```
 
 ## Endpoint
@@ -54,7 +54,7 @@ npm i amethyse-api
 
 **Connexion :**
 ```js
-    const ameClient = require("amethyse-api")
+    const ameClient = require("amethyste-api")
     const ameApi = new ameClient("token")
 ```
 **Endpoint :**
