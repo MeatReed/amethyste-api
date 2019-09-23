@@ -59,10 +59,12 @@ npm i amethyste-api
 ```
 **Endpoint :**
 ```js
-    let image = ameApi.generate("endpoint", {
+    ameApi.generate("endpoint", {
 	    "url" : "image url"
+    }).then(image => {
+      console.log(image)
     })
-    console.log(image)
+    
 ```
 *Returns*
 ```
@@ -70,10 +72,11 @@ npm i amethyste-api
 ```
 **Endpoint  Exemple:**
 ```js
-    let image = ameApi.generate("glitch", {
+    ameApi.generate("glitch", {
 	    "url" : "https://cdn.discordapp.com/avatars/450352584302002186/c0ff7e943ab89560503b8e99591ff888.png?size=2048"
+    }).then(image => {
+      console.log(image)
     })
-    console.log(image)
 ```
 *Returns*
 ```
