@@ -44,7 +44,11 @@ npm i amethyse-api
 |wanted|url|
 |3000years|url|
 |rip |url|
-
+|utatoo |url|
+|wasted |url|
+|frame |url|
+|moustache |url|
+|scary |url|
 
 ## Utilisation
 
