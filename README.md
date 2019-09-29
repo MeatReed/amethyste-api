@@ -12,6 +12,9 @@
 ## Description
 Module non-officiel pour l'api du bot Améthyste
 
+## Utilisation
+Documentation officielle : <a href="https://docs.api.amethyste.moe/">https://docs.api.amethyste.moe/</a>
+
 ## Installation
 ```
 npm i amethyste-api
