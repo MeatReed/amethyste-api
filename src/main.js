@@ -2,15 +2,17 @@ const {
     post,
     get
 } = require("axios");
-const baseURL = "https://v1.api.amethyste.moe";
 
-class ameApi {
+class ameClient {
 
     /****
      * @param {string} token provider api.amethyste.moe
      */
-    constructor(apikey) {
-        this.apikey = apikey;
+    constructor(token, options = {}) {
+        if(!token) throw new Error("Unknown Token: Token Missing");
+        if (typeof token !== "string") throw new SyntaxError("Invalid Token: Token must be a String");
+        this.token = token;
+        this.baseURL = options.baseURL || "https://v1.api.amethyste.moe";
     }
 
     /**
@@ -20,13 +22,13 @@ class ameApi {
      * @returns {Promise<Object>}
      */
     async generate(endpoint, data = {}) {
-        if(!this.apikey) throw 'Missing Api Key';
+        if(!this.apikey) 
         if(!endpoint) throw 'Missing endpoint';
         try {
-            let image = await post(`${baseURL}/generate/${endpoint}`, data, {
+            let image = await post(`${this.baseURL}/generate/${endpoint}`, data, {
                 responseType: 'arraybuffer',
                 headers: {
-                    'Authorization': `Bearer ${this.apikey}`,
+                    'Authorization': `Bearer ${this.token}`,
                 }
             });
             return image.data;
@@ -40,12 +42,11 @@ class ameApi {
      * @returns {Promise<Array>}
      */
     async getEndpointsGenerate(){
-        if(!this.apikey) throw 'Missing Api Key';
-        try{
-            let info = await get(`${baseURL}/images`);
+        try {
+            let info = await get(`${this.baseURL}/images`);
             if(!info.data) throw "Endpoints not found.";
             return info.data.endpoints;
-        }catch (e) {
+        } catch (e) {
             throw e;
         }
     }
@@ -53,16 +54,16 @@ class ameApi {
      * GET all endpoints of images
      * @returns {Promise<Array>}
      */
-    async getEndpointsImage(){
+    async getEndpointsImage(onlyFree){
         if(!this.apikey) throw 'Missing Api Key';
-        try{
-            let info = await get(`${baseURL}/generate`);
+        try {
+            let info = await get(`${this.baseURL}/generate`);
             if(!info.data) throw "Endpoints not found.";
-            return info.data.endpoints;
-        }catch (e) {
+            return onlyFree ? info.data.endpoints.free : [... info.data.endpoints.free, ...info.data.endpoints.premium];
+        } catch (e) {
             throw e;
         }
     }
 }
 
-module.exports = ameApi;
+module.exports = ameClient;
