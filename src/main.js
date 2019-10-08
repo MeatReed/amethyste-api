@@ -22,7 +22,6 @@ class ameClient {
      * @returns {Promise<Object>}
      */
     async generate(endpoint, data = {}) {
-        if(!this.apikey) 
         if(!endpoint) throw 'Missing endpoint';
         try {
             let image = await post(`${this.baseURL}/generate/${endpoint}`, data, {
@@ -55,7 +54,6 @@ class ameClient {
      * @returns {Promise<Array>}
      */
     async getEndpointsImage(onlyFree){
-        if(!this.apikey) throw 'Missing Api Key';
         try {
             let info = await get(`${this.baseURL}/generate`);
             if(!info.data) throw "Endpoints not found.";
