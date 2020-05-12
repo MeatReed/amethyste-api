@@ -37,11 +37,11 @@ class ameClient {
     }
     
 
-    async image(endpoint, data ={}){
+    async image(endpoint, data = {}){
       if(!endpoint) throw 'Missing endpoint';
       
       try {
-            let image = await get(`${this.baseURL}/image/${endpoint}`, {
+            let image = await get(`${this.baseURL}/image/${endpoint}`, data, {
                 responseType: 'arraybuffer',
                 headers: {
                     'Authorization': `Bearer ${this.token}`,
