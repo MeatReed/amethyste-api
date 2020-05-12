@@ -57,35 +57,52 @@ npm i amethyste-api
 
 **Connexion :**
 ```js
-    const ameClient = require("amethyste-api")
-    const ameApi = new ameClient("token")
+const ameClient = require("amethyste-api")
+const ameApi = new ameClient("token")
 ```
-**Endpoint :**
+**Endpoint Generate :**
 ```js
-    ameApi.generate("endpoint", {
-	    "url" : "image url"
-    }).then(image => {
-      console.log(image)
-    }).catch(err => {
-      throw err;
-    })
-    
+ameApi.generate("endpoint", {
+    "url" : "image url"
+}).then(image => {
+    console.log(image)
+}).catch(err => {
+    throw err;
+});
 ```
 *Returns*
 ```
 <Buffer ... >
 ```
-**Endpoint  Exemple:**
+**Endpoint Generate Exemple:**
 ```js
-    ameApi.generate("glitch", {
-	    "url" : "https://cdn.discordapp.com/avatars/450352584302002186/c0ff7e943ab89560503b8e99591ff888.png?size=2048"
-    }).then(image => {
-      console.log(image)
-    }).catch(err => {
-      throw err;
-    })
+ameApi.generate("glitch", {
+    "url" : "https://cdn.discordapp.com/avatars/450352584302002186/c0ff7e943ab89560503b8e99591ff888.png?size=2048"
+}).then(image => {
+    console.log(image)
+}).catch(err => {
+    throw err;
+})
 ```
 *Returns*
 ```
 <Buffer ... >
+```
+
+**Endpoint Image Exemple:**
+```js
+ameApi.generate("wallpaper", {
+    "nsfw" : "false"
+}).then(image => {
+    console.log(image)
+}).catch(err => {
+    throw err;
+});
+```
+*Returns*
+```json
+{
+  "status": 200,
+  "url": "https://cdn.amethyste.moe/wallpaper/14ebdfb3f9a9e4025b54ab759f1ad9e60bd0.jpg"
+}
 ```
