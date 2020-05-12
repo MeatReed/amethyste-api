@@ -35,6 +35,27 @@ class ameClient {
             throw err;
         }
     }
+    
+
+    async image(endpoint, data = {}){
+      if(!endpoint) throw 'Missing endpoint';
+      
+      try {
+            let image = await get(`${this.baseURL}/image/${endpoint}`, {
+                params: {
+                    data
+                },
+            
+ 
+                headers: {
+                    'Authorization': `Bearer ${this.token}`,
+                }
+            });
+            return image.data;
+        } catch (err) {
+            throw err;
+        }
+    }
 
     /***
      * GET all endpoints of generation
