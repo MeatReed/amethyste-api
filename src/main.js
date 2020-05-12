@@ -42,12 +42,12 @@ class ameClient {
       
       try {
             let image = await get(`${this.baseURL}/image/${endpoint}`, data, {
-                responseType: 'arraybuffer',
+                responseType: 'application/JSON',
                 headers: {
                     'Authorization': `Bearer ${this.token}`,
                 }
             });
-            return image.data;
+            return image.url;
         } catch (err) {
             throw err;
         }
