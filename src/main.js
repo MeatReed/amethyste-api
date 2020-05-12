@@ -46,7 +46,7 @@ class ameClient {
                     data
                 },
             
-                responseType: 'application/JSON',
+ 
                 headers: {
                     'Authorization': `Bearer ${this.token}`,
                 }
