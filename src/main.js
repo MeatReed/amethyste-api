@@ -37,7 +37,7 @@ class ameClient {
     }
     
 
-    async image(endpoint){
+    async image(endpoint, data ={}){
       if(!endpoint) throw 'Missing endpoint';
       
       try {
