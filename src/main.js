@@ -42,7 +42,7 @@ class ameClient {
      */
     async getEndpointsGenerate(){
         try {
-            let info = await get(`${this.baseURL}/images`);
+            let info = await get(`${this.baseURL}/generate`);
             if(!info.data) throw "Endpoints not found.";
             return info.data.endpoints;
         } catch (e) {
@@ -55,7 +55,7 @@ class ameClient {
      */
     async getEndpointsImage(onlyFree){
         try {
-            let info = await get(`${this.baseURL}/generate`);
+            let info = await get(`${this.baseURL}/image`);
             if(!info.data) throw "Endpoints not found.";
             return onlyFree ? info.data.endpoints.free : [... info.data.endpoints.free, ...info.data.endpoints.premium];
         } catch (e) {
