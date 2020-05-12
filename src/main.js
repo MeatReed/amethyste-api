@@ -41,7 +41,11 @@ class ameClient {
       if(!endpoint) throw 'Missing endpoint';
       
       try {
-            let image = await get(`${this.baseURL}/image/${endpoint}`, data, {
+            let image = await get(`${this.baseURL}/image/${endpoint}`, {
+                params: {
+                    data
+                },
+            
                 responseType: 'application/JSON',
                 headers: {
                     'Authorization': `Bearer ${this.token}`,
