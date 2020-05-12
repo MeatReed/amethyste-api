@@ -47,7 +47,7 @@ class ameClient {
                     'Authorization': `Bearer ${this.token}`,
                 }
             });
-            return image.url;
+            return image.data;
         } catch (err) {
             throw err;
         }
