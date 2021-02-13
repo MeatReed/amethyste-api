@@ -91,7 +91,7 @@ ameApi.generate("glitch", {
 
 **Endpoint Image Exemple:**
 ```js
-ameApi.generate("wallpaper", {
+ameApi.image("wallpaper", {
     "nsfw" : "false"
 }).then(image => {
     console.log(image)
