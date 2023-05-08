@@ -1,7 +1,4 @@
-const {
-    post,
-    get
-} = require("axios");
+const {post,get} = require("axios");
 
 /**
  * @class ameClient
